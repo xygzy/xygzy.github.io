@@ -9,7 +9,7 @@ author: GZY
 * content
 {:toc}
 
-##Common linux command
+## linux
 
 /etc/httpd/conf/httpd.conf
 
@@ -23,5 +23,7 @@ chkconfig mysqld on
 
 chkconfig httpd on
 
+## linux
 
-
+git config branch.master.remote origin  
+git config branch.master.merge refs/heads/master
