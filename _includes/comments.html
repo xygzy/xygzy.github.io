@@ -3,8 +3,8 @@
 <!--PC和WAP自适应版-->
 <script>
 var urlPath = window.location.pathname;
-urlPath.replace("/", "_");
-urlPath.replace("-", "_");
+urlPath = urlPath.replace("/", "_");
+urlPath = urlPath.replace("-", "_");
 window.document.write('<div id="SOHUCS" sid="' + urlPath + '" ></div> ');
 </script>
 <script type="text/javascript"> 
