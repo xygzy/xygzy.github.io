@@ -11,7 +11,7 @@ author: GZY
 
 <script type="text/javascript">
   var urlPath = window.location.pathname;
-  if(urlPath <> "/"){
+  if(urlPath != "/"){
     alert("This is a test");
   }
 </script>
