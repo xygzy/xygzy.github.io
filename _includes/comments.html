@@ -1,7 +1,12 @@
 {% if site.changyan_shortname %}
 <!-- changyan start -->
 <!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="test" ></div> 
+<script>
+var urlPath = window.location.pathname;
+urlPath.replace("/", "_");
+urlPath.replace("-", "_");
+window.document.write('<div id="SOHUCS" sid="' + urlPath + '" ></div> ');
+</script>
 <script type="text/javascript"> 
 (function(){ 
 var appid = 'cysVXl2SQ'; 
