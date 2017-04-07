@@ -10,7 +10,10 @@ author: GZY
 {:toc}
 
 <script type="text/javascript">
-  alert("This is a test message of this site");
+  var urlPath = window.location.pathname;
+  if(urlPath == ""){
+    alert("This is a test");
+  }
 </script>
 
 ## This is a test of this article.
@@ -18,3 +21,7 @@ author: GZY
 * One
 * Two
 * Three
+
+1. One
+2. Two
+3. Three
