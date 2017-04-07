@@ -12,7 +12,8 @@ author: GZY
 <script type="text/javascript">
   var urlPath = window.location.pathname;
   if(urlPath != "/"){
-    alert("This is a test");
+    //alert("This is a test");
+    console.log("You are in page!");
   }
 </script>
 
