@@ -30,7 +30,7 @@ description_footer: This is GZY's Blog！
 changyan_shortname: changyan
 disqus_shortname: 
 
-# statistic analysis 统计代码
+# statistic analysis
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 baidu_tongji_id: 
