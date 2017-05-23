@@ -16,6 +16,7 @@ author: GZY
 主要分为以下三部分：
 
 * 树莓派micro-SD卡制作
+* ngrok内网穿透
 * 家用媒体服务器（minidlna）
 * 家用共享文件服务器（待定）
 
@@ -28,11 +29,28 @@ author: GZY
 树莓派系统镜像：<a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">Raspbian</a>
 
 lscpu 查询CPU的信息
+
 free -h 了解内存使用状况
+
 sudo fdisk -l SD卡的存储情况
 
-1.sudo raspi-config
-开启SSH
+sudo raspi-config 开启SSH
+
+
+## ngrok内网穿透，参考 http://blog.csdn.net/lw_chen/article/details/53419665
+
+
+1. sudo apt-get install build-essential golang mercurial git 安装必要的工具和语言环境
+
+2. go version 看看是不是小于等于 1.2.1
+
+3. git clone https://github.com/tutumcloud/ngrok.git ngrok
+
+4. NGROK_DOMAIN="gzy.host"
+
+5. sudo make release-server release-client 如果一切正常，ngrok/bin 目录下应该有 ngrok、ngrokd 两个可执行文件，ngrokd 是服务端文件，ngrok 是 Linux 的客户端
+
+6. ./bin/ngrokd -domain="gzy.host" -httpAddr=":8081"
 
 
 ## 家用媒体服务器（minidlna）
