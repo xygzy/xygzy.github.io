@@ -48,21 +48,21 @@ sudo raspi-config 开启SSH
 
 4. NGROK_DOMAIN="gzy.host"
 
-  openssl genrsa -out base.key 2048
+    openssl genrsa -out base.key 2048
 
-  openssl req -new -x509 -nodes -key base.key -days 10000 -subj "/CN=$NGROK_DOMAIN" -out base.pem
+    openssl req -new -x509 -nodes -key base.key -days 10000 -subj "/CN=$NGROK_DOMAIN" -out base.pem
 
-  openssl genrsa -out server.key 2048
+    openssl genrsa -out server.key 2048
 
-  openssl req -new -key server.key -subj "/CN=$NGROK_DOMAIN" -out server.csr
+    openssl req -new -key server.key -subj "/CN=$NGROK_DOMAIN" -out server.csr
 
-  openssl x509 -req -in server.csr -CA base.pem -CAkey base.key -CAcreateserial -days 10000 -out server.crt
+    openssl x509 -req -in server.csr -CA base.pem -CAkey base.key -CAcreateserial -days 10000 -out server.crt
 
-  cp base.pem assets/client/tls/ngrokroot.crt
+    cp base.pem assets/client/tls/ngrokroot.crt
 
-  cp server.crt assets/server/tls/snakeoil.crt
+    cp server.crt assets/server/tls/snakeoil.crt
 
-  cp server.key assets/server/tls/snakeoil.key
+    cp server.key assets/server/tls/snakeoil.key
 
 
 5. sudo make release-server release-client 如果一切正常，ngrok/bin 目录下应该有 ngrok、ngrokd 两个可执行文件，ngrokd 是服务端文件，ngrok 是 Linux 的客户端
@@ -71,25 +71,26 @@ sudo raspi-config 开启SSH
 
 7. vi ngrok.cfg
 
-    server_addr: gzy.host:4443
-    trust_host_root_certs: false
-    tunnels:
-        http:
-            proto:
-                http: 80
-            subdomain: test
-        ssh:
-            remote_port: 110
-            proto:
-                tcp: 22
+```html
+server_addr: gzy.host:4443
+trust_host_root_certs: false
+tunnels:
+    http:
+        proto:
+            http: 80
+        subdomain: test
+    ssh:
+        remote_port: 110
+        proto:
+            tcp: 22
+```
 
-
-  ./ngrok -config=ngrok.cfg start http ssh 客户端启动
+    ./ngrok -config=ngrok.cfg start http ssh 客户端启动
 
 8. /etc/rc.local
 
-  在exit 0这句之前加入这句话：
-  (sleep 3; /root/ngrok/ngrok -config=/root/ngrok/ngrok.cfg start ssh) &
+    在exit 0这句之前加入这句话：
+    (sleep 3; /root/ngrok/ngrok -config=/root/ngrok/ngrok.cfg start ssh) &
 
 
 
