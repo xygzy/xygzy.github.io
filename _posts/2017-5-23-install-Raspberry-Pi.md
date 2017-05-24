@@ -37,7 +37,7 @@ sudo fdisk -l SD卡的存储情况
 sudo raspi-config 开启SSH
 
 
-## ngrok内网穿透，参考 http://blog.csdn.net/lw_chen/article/details/53419665
+## ngrok内网穿透，参考 http://blog.csdn.net/lw_chen/article/details/53419665 http://www.vuln.cn/8634
 
 
 1. sudo apt-get install build-essential golang mercurial git 安装必要的工具和语言环境
@@ -48,9 +48,49 @@ sudo raspi-config 开启SSH
 
 4. NGROK_DOMAIN="gzy.host"
 
+openssl genrsa -out base.key 2048
+
+openssl req -new -x509 -nodes -key base.key -days 10000 -subj "/CN=$NGROK_DOMAIN" -out base.pem
+
+openssl genrsa -out server.key 2048
+
+openssl req -new -key server.key -subj "/CN=$NGROK_DOMAIN" -out server.csr
+
+openssl x509 -req -in server.csr -CA base.pem -CAkey base.key -CAcreateserial -days 10000 -out server.crt
+
+cp base.pem assets/client/tls/ngrokroot.crt
+
+cp server.crt assets/server/tls/snakeoil.crt
+
+cp server.key assets/server/tls/snakeoil.key
+
+
 5. sudo make release-server release-client 如果一切正常，ngrok/bin 目录下应该有 ngrok、ngrokd 两个可执行文件，ngrokd 是服务端文件，ngrok 是 Linux 的客户端
 
-6. ./bin/ngrokd -domain="gzy.host" -httpAddr=":8081"
+6. ./bin/ngrokd -tlsKey=server.key -tlsCrt=server.crt -domain="gzy.host" -httpAddr=":8081" -httpsAddr=":8082" 服务端启动
+
+7. vi ngrok.cfg
+
+server_addr: gzy.host:4443
+trust_host_root_certs: false
+tunnels:
+    http:
+        proto:
+            http: 80
+        subdomain: test
+    ssh:
+        remote_port: 110
+        proto:
+            tcp: 22
+
+
+./ngrok -config=ngrok.cfg start http ssh 客户端启动
+
+8. /etc/rc.local
+
+在exit 0这句之前加入这句话：
+(sleep 3; /root/ngrok/ngrok -config=/root/ngrok/ngrok.cfg start ssh) &
+
 
 
 ## 家用媒体服务器（minidlna）
@@ -88,6 +128,19 @@ dlna作为家用媒体播放协议，由来已久。此次使用minidlna实现�
 
 来源：http://bbs.elecfans.com/jishu_901029_1_1.html
 
+1. sudo apt-get update
+
+2. sudo apt-get install minidlna
+
+3. etc/minidlna.conf
+
+4. /etc/init.d/minidlna restart
+
+5. sudo update-rc.d minidlna defaults 让 minidlna 随机启动
+
+6. sudo service minidlna force-reload 强制刷新
+
+7. 
 
 ## 家用共享文件服务器（待定）
 
