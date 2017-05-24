@@ -71,7 +71,7 @@ sudo raspi-config 开启SSH
 
 7. vi ngrok.cfg
 
-```html
+    ```html
 server_addr: gzy.host:4443
 trust_host_root_certs: false
 tunnels:
@@ -83,7 +83,7 @@ tunnels:
         remote_port: 110
         proto:
             tcp: 22
-```
+    ```
 
     ./ngrok -config=ngrok.cfg start http ssh 客户端启动
 
