@@ -13,7 +13,7 @@ author: GZY
 最近入手了一个树莓派3，因为家用需要存储量和运行速度不是很高，所以计划作为家用媒体服务器以及家用共享文件服务器使用。
 因为之前没有用过树莓派的系统，所以先在网上查了一下怎么弄。
 在博客里稍作记录。
-主要分为以下三部分：
+主要分为以下四个部分：
 
 * 树莓派micro-SD卡制作
 * ngrok内网穿透
@@ -186,7 +186,7 @@ D:\upload.html
 	<body>
 	<div style="text-align:center;color:#B7B7B7;">
 			<p>
-			家庭用のファイル共有
+			家族用のファイル共有
 			</p>
 			<p>
 				<form action="/cgi-bin/form.py" method="post" enctype="multipart/form-data">
