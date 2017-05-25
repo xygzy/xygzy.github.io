@@ -18,7 +18,7 @@ author: GZY
 * 树莓派micro-SD卡制作
 * ngrok内网穿透
 * 家用媒体服务器（minidlna）
-* 家用共享文件服务器（待定）
+* 家用共享文件服务器
 
 
 ## 树莓派micro-SD卡制作
@@ -39,6 +39,8 @@ sudo raspi-config 开启SSH
 
 ## ngrok内网穿透，参考 http://blog.csdn.net/lw_chen/article/details/53419665 http://www.vuln.cn/8634
 
+
+服务器端计划用腾讯云服务器，虽然带宽比较小，但对于家用来说，已经完全足够了。
 
 1. sudo apt-get install build-essential golang mercurial git 安装必要的工具和语言环境
 
@@ -142,15 +144,63 @@ dlna作为家用媒体播放协议，由来已久。此次使用minidlna实现�
 6. sudo service minidlna force-reload 强制刷新
 
 
-## 家用共享文件服务器（待定）
+## 家用共享文件服务器
 
 
+家用共享文件服务器计划用python搭建一个简单的来实现文件的上传。
+家用的主要目的无非是两个，一是作为文件中转站使用，二是为dlna上传合适的资源来播放。
+从这两点简单来看，是完全满足需要的。
 
+python -m SimpleHTTPServer 8080 简单的python服务器，可作为文件共享使用，无法处理post请求。
+
+python -m CGIHTTPServer 8080 简单的python服务器，可作为文件共享使用，可以处理post请求。
+
+D:\upload.html
+```html
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			文件上传
+		</title>
+	</head>
+	<body>
+	<div style="text-align:center;color:#B7B7B7;">
+			<p>
+				<form action="/cgi-bin/form.py" method="post" enctype="multipart/form-data">
+					<label for="uploadfile">上传</label>&nbsp;<input type="file" name="uploadfile" id="uploadfile" /><br />
+					<input type="submit" name="submit" value="提交" />
+				</form>
+			</p>
+		</div>
+	</body>
+</html>
+```
+
+D:\cgi-bin\form.py
+```python
+# -*- coding: utf-8 -*-
+import os
+import shutil
+import cgi
+
+# 接受表达提交的数据 
+form = cgi.FieldStorage() 
+
+# 提取这个文件
+myfile = form["uploadfile"]
+
+#判断是否是文件
+if myfile.filename:
+    open(os.path.join(os.getcwd(), myfile.filename), 'wb').write(myfile.file.read())
+
+print 'Content-Type: text/html\n\n' 
+print '<script> window.location="../../";</script> '
+```
 
 <script type="text/javascript">
   var urlPath = window.location.pathname;
   if(urlPath != "/"){
-    //alert("This is a test");
-    console.log("You are in page!");
+    console.log("感谢您访问本网站，期待您的下次访问!");
   }
 </script>
