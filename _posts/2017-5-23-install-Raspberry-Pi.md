@@ -34,7 +34,7 @@ free -h 了解内存使用状况
 
 sudo fdisk -l SD卡的存储情况
 
-sudo raspi-config 开启SSH
+sudo raspi-config 选择1扩展存储空间，开启SSH
 
 
 ## ngrok内网穿透
