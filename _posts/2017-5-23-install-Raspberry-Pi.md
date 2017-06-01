@@ -71,6 +71,10 @@ sudo raspi-config 选择1扩展存储空间，开启SSH
 
 5. sudo make release-server release-client 如果一切正常，ngrok/bin 目录下应该有 ngrok、ngrokd 两个可执行文件，ngrokd 是服务端文件，ngrok 是 Linux 的客户端
 
+    树莓派为linux-arm架构，重新声明go env里的变量 export GOOS=linux export GOARCH=arm
+
+    sudo make release-client
+
 6. ./bin/ngrokd -tlsKey=server.key -tlsCrt=server.crt -domain="gzy.host" -httpAddr=":8081" -httpsAddr=":8082" 服务端启动
 
 7. vi ngrok.cfg
@@ -100,37 +104,9 @@ tunnels:
 ## 家用媒体服务器（minidlna）
 
 
-dlna作为家用媒体播放协议，由来已久。此次使用minidlna实现此功能。端口号为：8200。（不推荐）
+dlna作为家用媒体播放协议，由来已久。此次使用minidlna实现此功能。端口号为：8200。
 
-1. sudo apt-get install autopoint debhelper dh-autoreconf gcc libavutil-dev libavcodec-dev libavformat-dev libjpeg-dev libsqlite3-dev libexif-dev libid3tag0-dev libogg-dev libvorbis-dev libflac-dev –y
-
-2. wget http://sourceforge.net/projects/minidlna/files/latest/download?source=files -O minidlna.tar.gz
-
-3. tar -xvzf minidlna.tar.gz
-
-4. cd minidlna-1.15
-
-5. ./configure
-
-6. sudo make
-
-7. sudo make install
-
-8. sudo cp minidlna.conf  /etc/
-
-9. sudo cp linux/minidlna.init.d.script  /etc/init.d/minidlna
-
-10. sudo chmod +x /etc/init.d/minidlna
-
-11. sudo update-rc.d minidlna defaults
-
-12. sudo vi /etc/minidlna.conf
-
-13. sudo service minidlna restart
-
-14. service minidlna status
-
-来源：http://bbs.elecfans.com/jishu_901029_1_1.html （推荐）
+来源：http://bbs.elecfans.com/jishu_901029_1_1.html
 
 1. sudo apt-get update
 
@@ -156,7 +132,7 @@ dlna作为家用媒体播放协议，由来已久。此次使用minidlna实现�
 
 sudo apt-get install samba samba-common-bin 安装samba
 
-vim /etc/samba/smb.conf 将 security=user 改为 security=share ，同时在文件结尾添加如下行：
+vim /etc/samba/smb.conf 将 security=user 改为 security=share ，同时在文件结尾添加如下行（实际与以下内容稍有不同）：
 ```python
 [share]
 comment=this is Linux share directory
