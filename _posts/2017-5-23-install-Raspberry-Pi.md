@@ -36,6 +36,8 @@ sudo fdisk -l SD卡的存储情况
 
 sudo raspi-config 选择1扩展存储空间，开启SSH
 
+df -hl 查看存储空间
+
 
 ## ngrok内网穿透
 
@@ -95,10 +97,7 @@ tunnels:
 
     ./ngrok -config=ngrok.cfg start http ssh 客户端启动
 
-8. /etc/rc.local 开机自动启动（待定）
-
-    在exit 0这句之前加入这句话：
-    (sleep 3; /root/ngrok/ngrok -config=/root/ngrok/ngrok.cfg start ssh) &
+8. 由于启动ngrok后无法进行其他作业，所以安装软件screen进行切屏操作。
 
 
 ## 家用媒体服务器（minidlna）
