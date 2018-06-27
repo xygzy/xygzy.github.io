@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "�ҵĴ���֮���г̱�"
+title:  "我的大阪之旅行程表"
 categories: travel
 tags:  travel schedule
 author: GZY
@@ -9,6 +9,6 @@ author: GZY
 * content
 {:toc}
 
-## 3�·�ȥ��һ�˴������棬���������ƶ����г̱�
+## 3月份去了一趟大阪游玩，以下是我制定的行程表
 
-![�����г̱�](/photo/201803/2018-06-27_13-29-29.jpg)
+![大阪行程表](/photo/201803/2018-06-27_13-29-29.jpg)
