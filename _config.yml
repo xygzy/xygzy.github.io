@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: GZY's Blog
-brief-intro: Soft Engineer
+title: News
+brief-intro: Nothing at all
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.gzy.host" # the base hostname & protocol for your site
+url: "http://news.wallofo.com" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
@@ -23,7 +23,7 @@ zhihu_username:
 linkedIn_username: 
 dribbble_username:
 
-description_footer: This is GZY's Blog！
+description_footer: This is Wallofo！
 
 # comments
 # two ways to comment, only choose one, and use your own short name
