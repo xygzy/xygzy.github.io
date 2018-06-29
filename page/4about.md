@@ -17,6 +17,8 @@ GZY
 * 2012年6月，毕业于天津工业大学（数学系信息与计算科学）
 
 
+![捐赠我](/photo/other/donate.jpg)
+
 
 ## Comments
 
