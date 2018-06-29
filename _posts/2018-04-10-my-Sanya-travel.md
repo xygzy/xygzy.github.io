@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "我的三亚之旅行程表"
-categories: travel
-tags:  travel schedule
+categories: 旅行
+tags:  游玩 计划
 author: GZY
 ---
 

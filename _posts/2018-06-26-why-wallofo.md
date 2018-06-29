@@ -2,7 +2,7 @@
 layout: post
 title:  "为什么网站域名叫做 Wallofo "
 categories: 杂谈
-tags:  comment
+tags:  评论
 author: GZY
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "关于股票的思考"
 categories: 理财
-tags:  股票 comment
+tags:  股票 评论
 author: GZY
 ---
 

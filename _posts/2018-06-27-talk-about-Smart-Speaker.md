@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "闲话智能音箱"
-categories: technology
-tags:  technology comment
+categories: 科技
+tags:  科技 评论
 author: GZY
 ---
 

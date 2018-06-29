@@ -2,7 +2,7 @@
 layout: post
 title:  "审视自己"
 categories: 记录
-tags:  自己 comment
+tags:  自己 评论
 author: GZY
 ---
 
