@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 记录点滴
-brief-intro: 发现生活的点滴之美
+title: 科普一下
+brief-intro: 科普你不知道的术语或内容
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://news.wallofo.com" # the base hostname & protocol for your site
 
