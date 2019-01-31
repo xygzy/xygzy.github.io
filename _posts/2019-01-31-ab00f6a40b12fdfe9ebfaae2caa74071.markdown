@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 一号才子第一章 干了一件冤活
+title: 修罗武神第一章 外门弟子
 categories: News
 tags:  Test
 author: GZY
@@ -14,4 +14,4 @@ author: GZY
 
 *****
 
-摘自[链接](https://www.yc.ifeng.com/book/3122039/1/)
+摘自[链接](http://www.yc.ifeng.com/book/3162085/1/)

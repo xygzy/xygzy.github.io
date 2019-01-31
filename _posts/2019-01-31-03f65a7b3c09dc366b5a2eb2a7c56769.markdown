@@ -1,0 +1,13 @@
+---
+layout: post
+title: 好友邀请
+categories: News
+tags:  Test
+author: GZY
+---
+
+我有邀请人
+
+*****
+
+摘自[链接](https://www.fengjr.com/cn/act/201608-pc-friendship.html)

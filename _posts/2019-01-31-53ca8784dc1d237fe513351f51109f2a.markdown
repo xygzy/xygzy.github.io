@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 一号才子第一章 干了一件冤活
+title: 内部游戏第1章 佳人相约
 categories: News
 tags:  Test
 author: GZY
@@ -14,4 +14,4 @@ author: GZY
 
 *****
 
-摘自[链接](https://www.yc.ifeng.com/book/3122039/1/)
+摘自[链接](http://www.yc.ifeng.com/book/3131955/1/)
