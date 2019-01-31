@@ -6,8 +6,6 @@ tags:  News 测试
 author: GZY
 ---
 
-##  测试页面
-
 *****
 
 0 .0 分
@@ -21,3 +19,5 @@ author: GZY
 简介：“精灵宝可梦”(台译“神奇宝贝”)是生活在这个星球上的不可思议的生物.立志成为精灵宝可梦大师的小智和皮卡丘一起踏上...
 
 *****
+
+摘自[链接](http://v.qq.com/kid/list/list_1_1_1_0_1.html#itype:1,iarea:-1,iage:-1,mi_sort:1,mi_show_type:0,mi_pagenum:0,mi_pagesize:18)
