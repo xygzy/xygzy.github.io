@@ -18,4 +18,4 @@ author: GZY
 
 *****
 
-摘自[链接](http://v.qq.com/kid/list/list_1_1_1_0_1.html#itype:1,iarea:-1,iage:-1,mi_sort:1,mi_show_type:0,mi_pagenum:0,mi_pagesize:18)
+摘自[链接](http://v.qq.com/kid/list/list_1_1_1_0_1.html#itype:2,iarea:-1,iage:-1,mi_sort:1,mi_show_type:0,mi_pagenum:0,mi_pagesize:18)
