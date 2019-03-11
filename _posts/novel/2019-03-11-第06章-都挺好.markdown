@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 第6章-都挺好
+title: 第06章-都挺好
 categories: 都挺好
 tags:  都挺好
 author: Test
