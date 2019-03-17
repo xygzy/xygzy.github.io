@@ -2,10 +2,6 @@ User-agent:  Baiduspider
 Disallow:  /content/
 Disallow:  /
 
-User-Agent:  Googlebot
-Disallow:  /content/
-Disallow:  /
-
 User-agent:  Bingbot
 Disallow:  /content/
 Disallow:  /
@@ -23,9 +19,5 @@ Disallow:  /content/
 Disallow:  /
 
 User-Agent:  Yahoo!  Slurp
-Disallow:  /content/
-Disallow:  /
-
-User-Agent:  *
 Disallow:  /content/
 Disallow:  /
