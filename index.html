@@ -57,7 +57,6 @@ layout: default
 
         <script>
         //根据设备适配
-        function browserRedirect() {
 	      var agent= navigator.userAgent.toLowerCase();
 	      var isIphone= agent.match(/iphone os/i) == "iphone os";
 	      var isAndroid= agent.match(/android/i) == "android";
@@ -67,7 +66,6 @@ layout: default
 	           var PC = document.getElementById('PCPage');
 	           PC.style.display  = 'none'; 
 	       }
-	    }
         </script>
         
         <!-- Pagination links -->
