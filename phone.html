@@ -7,52 +7,15 @@ layout: default
         <h1>欢迎光临</h1>
         <small>随性记录周遭的一切</small>
         <hr>
-        <script>
-        //根据设备适配
-        function browserRedirect() {
-	      var agent= navigator.userAgent.toLowerCase();
-	      var isIphone= agent.match(/iphone os/i) == "iphone os";
-	      var isAndroid= agent.match(/android/i) == "android";
-	      if (isIphone || isAndroid) {
-	           window.location.href= "/phone.html";
-	       }
-	    }
-        </script>
         <ul>
             {% for post in paginator.posts %}
               <li>
                 <h2>
                   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
-                    </div>
-                    <div class="label-card">
-                        {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
-                        {% endif %}
-                    </div>
-                    <div class="label-card">
-                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
-                    </div>
-
-                    <div class="label-card">
-                    {% include category.html %}
-                    </div>
-
-                    <div class="label-card">
-                    {% include tag.html %}
-                    </div>
-                </div>
-                <!--div class="excerpt">
-                    {{post.excerpt}}
-                </div-->
-                <div class="read-all">
-                    <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
               </li>
             {% endfor %}
+            <hr>
         </ul>
 
 
