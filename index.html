@@ -7,7 +7,7 @@ layout: default
         <h1>欢迎光临</h1>
         <small>随性记录周遭的一切</small>
         <hr>
-        <ul id="PCPage">
+        <ul>
             {% for post in paginator.posts %}
               <li>
                 <h2>
@@ -33,9 +33,9 @@ layout: default
                     {% include tag.html %}
                     </div>
                 </div>
-                <!--div class="excerpt">
+                <div class="excerpt">
                     {{post.excerpt}}
-                </div-->
+                </div>
                 <div class="read-all">
                     <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
@@ -44,30 +44,8 @@ layout: default
             {% endfor %}
         </ul>
 
-        <ul id="phonePage" style="display:none;">
-            {% for post in paginator.posts %}
-              <li>
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-              </li>
-            {% endfor %}
-            <hr>
-        </ul>
 
-        <script>
-        //根据设备适配
-	      var agent= navigator.userAgent.toLowerCase();
-	      var isIphone= agent.match(/iphone os/i) == "iphone os";
-	      var isAndroid= agent.match(/android/i) == "android";
-	      if (isIphone || isAndroid) {
-	           var phone = document.getElementById('phonePage');
-	           phone.style.display  = 'block';
-	           var PC = document.getElementById('PCPage');
-	           PC.style.display  = 'none'; 
-	       }
-        </script>
-        
+
         <!-- Pagination links -->
         <div class="pagination">
           {% if paginator.previous_page %}
