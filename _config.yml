@@ -9,7 +9,7 @@
 title: 科普一下
 brief-intro: 科普你不知道的术语或内容
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://news.wallofo.com" # the base hostname & protocol for your site
+url: "https://gaozhenye.com" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
