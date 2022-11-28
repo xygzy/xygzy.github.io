@@ -1,5 +1,5 @@
 ---
-layout: wiki
+layout: personal
 title: 体系结构
 cate1: Android
 cate2: 
@@ -11,6 +11,4 @@ keywords: Android
 
 ![Android stack](/images/wiki/android-stack.png)
 
-## 参考
 
-* [The Android Source Code](http://source.android.com/source/index.html)

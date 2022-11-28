@@ -91,9 +91,9 @@ navs:
     href: /personal/
     label: 私人
 
-  -
-    href: /links/
-    label: 链接
+#  -
+#    href: /links/
+#    label: 链接
 
   -
     href: /about/
