@@ -1,5 +1,5 @@
 ---
-layout: wiki
+layout: personal
 title: ORM
 cate1: Android
 cate2:

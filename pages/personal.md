@@ -9,7 +9,7 @@ menu: 私人
 permalink: /personal/
 ---
 
-> 记多少命令和快捷键会让脑袋爆炸呢？
+> 私人领地
 
 {% case site.components.personal.view %}
 
