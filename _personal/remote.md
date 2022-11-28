@@ -1,10 +1,10 @@
 ---
 layout: personal
 title: 远程配置信息概览
-cate1: 工具
+cate1: 汇总
 cate2: 
 description: 日常使用
-keywords: 工具
+keywords: 汇总, 远程
 ---
 
 ## 前缀

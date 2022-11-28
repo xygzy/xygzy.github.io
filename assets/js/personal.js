@@ -5,4 +5,6 @@ jQuery(function() {
   $(".collapsed").attr("style", "display:none;");
    
   $(".collection-info").attr("style", "display:none;");
+  
+  $("#title").attr("href", "/personal");
 });

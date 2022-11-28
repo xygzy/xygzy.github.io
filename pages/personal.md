@@ -1,6 +1,6 @@
 ---
 layout: personal
-title: Personal
+title: 工作相关
 description: 私人领地
 keywords: 私人, Personal
 comments: false
@@ -9,7 +9,7 @@ menu: 私人
 permalink: /personal/
 ---
 
-> 私人领地
+> 信息汇总整理
 
 {% case site.components.personal.view %}
 
