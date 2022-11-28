@@ -127,6 +127,9 @@ collections:
     wiki:
         output: true
         permalink: /wiki/:path/
+    personal:
+        output: true
+        permalink: /personal/:path/
     fragments:
         output: true
         permalink: /fragment/:path/
