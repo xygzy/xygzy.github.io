@@ -1,5 +1,5 @@
 ---
-layout: wiki
+layout: personal
 title: Personal
 description: 私人领地
 keywords: 私人, Personal
