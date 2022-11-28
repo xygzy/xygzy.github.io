@@ -1,10 +1,10 @@
 ---
 layout: personal
-title: 体系结构
-cate1: Android
+title: 日常使用
+cate1: 工具
 cate2: 
-description: 体系结构
-keywords: Android
+description: 日常使用
+keywords: 工具
 ---
 
 ## 架构图
