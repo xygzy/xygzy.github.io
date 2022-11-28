@@ -85,9 +85,9 @@ navs:
     href: /wiki/
     label: 维基
 
-   -
-     href: /personal/
-     label: 私人
+  -
+    href: /personal/
+    label: 私人
 
   -
     href: /links/
