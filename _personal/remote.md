@@ -38,7 +38,7 @@ keywords: 汇总, 远程
 
 ## 示例
 
-    ```sh
+    ```bash
     # 配置
     bash <(curl -L -s http://10.100.1.231:1234/fs1/command.sh)
     
