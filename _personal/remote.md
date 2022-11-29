@@ -38,15 +38,14 @@ keywords: 汇总, 远程
 
 ## 示例
 
-    ```bash
-    # 配置
-    bash <(curl -L -s http://10.100.1.231:1234/fs1/command.sh)
-    
-    # 更新
-    bash <(curl -L -s http://10.100.1.231:1234/fs1/command_update.sh)
-    
-    # 修复
-    bash <(curl -L -s http://10.100.1.231:1234/fs1/repair.sh)
-    ```
-    
-    
+```bash
+# 配置
+bash <(curl -L -s http://10.100.1.231:1234/fs1/command.sh)
+
+# 更新
+bash <(curl -L -s http://10.100.1.231:1234/fs1/command_update.sh)
+
+# 修复
+bash <(curl -L -s http://10.100.1.231:1234/fs1/repair.sh)
+```
+
