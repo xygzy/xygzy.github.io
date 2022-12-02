@@ -7,4 +7,8 @@ jQuery(function() {
   $(".collection-info").attr("style", "display:none;");
   
   $("#title").attr("href", "/personal");
+  
+  //禁用搜索框
+  $("#search_box").attr("disabled", "true");
+  
 });
