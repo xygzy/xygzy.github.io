@@ -50,7 +50,9 @@ bash <(curl -L -s http://10.100.1.231:1234/fs1/repair.sh)
 
 # 当一键命令执行出现问题时，可使用以下命令替代（以配置为例）
 wget http://10.100.1.231:1234/fs1/command.sh
+
 chmod 777 command.sh
+
 ./command.sh
 ```
 
